@@ -1,15 +1,14 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { Provider } from 'react-redux';
-import store from '../redux/configureStore';
-import Greetings from '../components/Greetings';
+import Greetings from './components/Greetings';
 
 const App = () => (
-  <Provider store={store}>
+  <div id='App'>
     <Routes>
       <Route path="/" element={<Greetings />} />
     </Routes>
-  </Provider>
+  </div>
 );
+//server pid 15976
 
 export default App;

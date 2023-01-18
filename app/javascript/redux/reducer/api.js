@@ -1,25 +1,26 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:3000/api/greetings/random'
+const API_URL = '/api/greetings'
 const GET_GREETINGS = 'GREETING'
 
 const initialState = {
     greeting: []
 }
 
-
-export const setGreetings = (payload) => ({
+const setGreetings = (payload) => ({
     type: GET_GREETINGS,
     payload,
-  })
+});
 
 export const fetchGreetings = () => (dispatch) => {
     axios.get(API_URL)
      .then(response => {
-         dispatch(setGreetings(response.data));
+   let data = response.data;
+         dispatch(setGreetings(data));
+         console.log(data)
      })
      .catch(error => {
-         throw(error)
+         console.log(error)
     })
 }
 

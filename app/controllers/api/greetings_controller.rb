@@ -1,9 +1,6 @@
-module Api
-  class Api::GreetingsController < ApplicationController
-    def index
-     greeting = Greeting.order('RANDOM()').first
-     render json: GreetingSerializer.new(greeting).serializable_hash.to_json
-    end
+class Api::GreetingsController < ApplicationController
+  def index
+    greeting = Greeting.order('RANDOM()').first
+    render json: greeting
   end
 end
-

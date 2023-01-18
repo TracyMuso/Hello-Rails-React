@@ -73,9 +73,9 @@
 - [ ]  4: Setup and controllers.
 - [ ]  5: Controllers specs.
 - [ ]  6: Views.
-- [ ]  7: Forms.
-- [ ]  8: Integration specs for Views and fixing n+1 problems.
-- [ ]  9: Add Devise.
+- [ ]  7: Add react
+- [ ]  8: Install dependencies
+- [ ]  9: Add Redux.
 - [ ]  10: Add authorization rules.
 - [ ]  11: Add API endpoints.
 
@@ -124,7 +124,7 @@ Go to your project
 Install this projects dependencies with:
 
 ```sh
-  bundle install
+  bundle install and yarn install/npm install
 ```
 
 ### Usage
@@ -132,7 +132,7 @@ Install this projects dependencies with:
 To run the project, execute the following command:
 
 ```sh
-  rails server or rails s
+  bin/dev
 ```
 
 
